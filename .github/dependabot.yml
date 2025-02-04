@@ -3,7 +3,11 @@
 
 version: 2
 updates:
-- package-ecosystem: "pip" # See documentation for possible values
-  directory: "authn-service" # Location of package manifests
-  schedule:
-    interval: "daily"
+  - package-ecosystem: "pip"
+    directory: "/authn-service"
+    schedule:
+      interval: "daily"
+    labels:
+      - "triage-required"
+    commit-message:
+      prefix: "pip"
